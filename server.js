@@ -97,7 +97,10 @@ app.get("/", (req, res) => res.send("Hello World"));
 //Use routes
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: [
+      'http://localhost:3000',
+      'https://pathpradarshak.netlify.app'
+    ],
     credentials: true,
   })
 );
